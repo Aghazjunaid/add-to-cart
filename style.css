@@ -459,3 +459,19 @@ footer{
 
     
 }
+
+.cart-btn{
+    background-color: #FFF;
+    border: 2px solid #02519E;
+    display: flex;
+    width: 252px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    color: #02519E;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 32px;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -22,9 +22,9 @@ productDetail()
 
 
 
-let cart = []
 function addToCart(data){
     let cartData = JSON.parse(localStorage.getItem("cart"))
+    let cart = cartData ?? []
     let filterData = cartData && cartData.find(ele => ele.id == data.id)
     if(filterData){
         alert("Product is already present in Cart")
