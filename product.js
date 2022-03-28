@@ -57,23 +57,33 @@ let bigStealsOfTheWeekData = [
     },
 ]
 
+function setLocalStorage (){
+    localStorage.setItem("productList",JSON.stringify(bigStealsOfTheWeekData))
+}
+setLocalStorage()
+
 
 let bidStealsOfWeekTag = document.getElementById("big-steals-of-week")
 
 function createDealsOfTheDay(data){
     console.log(data)
-    let createdElement = document.createElement("div")
+    let createdElement = document.createElement("a")
+    createdElement.href = `product-detail?id=${data.id}`
     createdElement.className = "footwear-Card-design"
-    createdElement.innerHTML = `<a href="/">
+    createdElement.innerHTML = `
         <img src=${data.url} alt="image">
         <div class="title">${data.title}</div>
         <div class="price">${data.price}</div>
         <div class="category">${data.description}</div>
-    </a>`
+    `
     return createdElement
 }
 
 for(let i=0; i<bigStealsOfTheWeekData.length; i++){
     let ele = createDealsOfTheDay(bigStealsOfTheWeekData[i])
     bidStealsOfWeekTag.appendChild(ele);
+}
+
+function onProductClick(data){
+    console.log(data)
 }
