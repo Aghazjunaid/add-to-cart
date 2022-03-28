@@ -1,0 +1,461 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto,Arial,sans-serif;
+    text-decoration: none;
+}
+.navbar{
+    width: 100%;
+    height: 60px;
+    background-color: #2874f0;
+}
+.container{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    padding: 10px;
+    word-spacing: 0;
+}
+.mobile-icons-left i{
+    display: none;
+}
+.mobile-icons-right{
+    display: none;
+}
+.searchbar{
+    position: relative;
+}
+.searchbar input{
+    width: 550px;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 0 40px 0 15px;
+}
+.searchbar i{
+    position: absolute;
+    color: #2874f0;
+    right: 13px;
+    font-size: 20px;
+    top: 8px;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+.dropbtn {
+    color:white; 
+    font-weight:bold;
+    margin: 0 30px;
+    cursor: pointer;
+  }
+  
+  .more-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* top: 38px; */
+  }
+  
+  .dropdown-content a {
+    width: 250px;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .more-dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+.btns input{
+    margin: 0 30px;
+    width: 130px;
+    height: 32px;
+    outline: none;
+    border: none;
+    color: #2874f0;
+    background-color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cart{
+    margin: 0 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    width: 60px;
+
+}
+
+.navData{
+    width: 100%;
+    background-color: white;
+    margin-bottom: 10px;
+}
+.navData-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    text-align: center;
+}
+.navData-container a{
+    text-decoration: none;
+    color: inherit;
+}
+.navData-container a:hover{
+    color: #2874f0;
+}
+.navData-container div img{
+    height: 75px;
+}
+.navData-container div div{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Carousel CSS */
+.carousel{
+    padding: 8px;
+    background-color: #f0f0f0;
+    position: relative;
+}
+.carousel img{
+    width: 100%;
+    cursor: pointer;
+}
+.carousel-left-symbol{
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background-color: white;
+    top: 90px;
+    border-radius: 0 5px 5px 0;
+    text-align: center;
+    font-size: 65px;
+    cursor: default;
+}
+
+.carousel-right-symbol{
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background-color: white;
+    top: 90px;
+    right: 7px;
+    cursor: default;
+    text-align: center;
+    font-size: 65px;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Footwear CSS */
+.clock{
+    display: flex;
+    margin-left: 18px;
+    align-items: center;
+
+}
+.clock span{
+    margin-left: 10px;
+}
+.footwear-header-clock{
+    display: flex;
+}
+.deals{
+    display: flex;
+}
+.ad img{
+    padding: 8px;
+    height: 350px;
+    width: 100%;
+}
+.footwear{
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 8px;
+}
+.footwear-header{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+.footwear-header input{
+    background: #2874f0;
+    color: #fff;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+    border: none;
+    width: 90px;
+    height: 40px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.footwear-cards{
+    padding-top: 10px;
+    display: flex;
+    cursor: pointer;
+    justify-content: space-between;
+    background-color: white;
+}
+.footwear-Card-design{
+    text-align: center;
+    padding: 9px;
+}
+.footwear-Card-design img{
+    height: 150px;
+    width: 150px;
+    object-fit: contain;
+}
+
+/* .footwear-Card-design img:hover{
+    height: 150px;
+    width: 155px;
+    object-fit: contain;
+} */
+
+.title{
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.price{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #388e3c;
+    padding-top: 8px;
+}
+.category{
+    opacity: .6;
+    font-size: 13px;
+    padding-top: 7px;
+}
+
+.details{
+    width: 100%;
+    padding: 25px;
+    text-align: left;
+    color: #878787;
+}
+.details-body{
+    margin: 18px 0;
+
+}
+.details-title{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.details-paragraph{
+    font-size: 12px;
+}
+footer{
+    background-color: #172337;
+}
+.upper-footer{
+    padding: 35px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.upper-footer-section{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.upper-footer-section div{
+    color: #878787;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 9px;
+}
+.upper-footer-section a{
+    line-height: 2;
+    font-size: 13px;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+}
+.upper-footer-section a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+.upper-footer-section p{
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.5;
+}
+.telephone{
+    display: flex;
+    align-items: center;
+}
+.telephone a{
+    color: #2874f0;
+    margin-left: 5px;
+}
+.lower-footer{
+    border-top: 1px solid #454d5e;
+    padding: 25px 0;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.lower-footer div{
+    margin-bottom: 10px;
+}
+.lower-footer div a{
+    color: #fff;
+    margin-left: 8px;
+}
+
+
+
+
+
+
+
+
+@media (max-width:850px){
+    .btns{
+        display: none;
+    }
+    .navbar{
+        height: 120px;
+    }
+    .container{
+        width: 100%;
+        flex-direction: column;
+    }
+    .mobile-icons{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .mobile-icons-left i{
+        display: block;
+        color: white;
+        font-size: 20px;
+        margin-right: 5px;
+    }
+    .logo > img{
+        height: 17px !important;
+    }
+    .mobile-icons-right{
+        display: block;
+        color: white;
+        display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 20px;
+    }
+    .mobile-icons-right img{
+        width: 15px;
+    }
+    .mobile-icons-right span{
+        color: #eaeaea;
+        margin-right: 15px;
+        font-size: 16px;
+    }
+    .mobile-icons-left{
+        display: flex;
+        align-items: center;
+        margin-left: 15px;
+    }
+    .searchbar{
+        width: 100%;
+        padding: 0 10px;
+    }
+    .searchbar input{
+        width: 100%;
+        padding: 0 5px 0 45px;
+        border-radius: 3px;
+    }
+    .searchbar i{
+        left: 25px;
+        font-size: 18px;
+        color: #b4a7a7;
+    }
+    .navData-container{
+        width: 100%;
+    }
+    
+    
+}
+
+
+@media (min-width:401px) and (max-width:850px){
+    .carousel img{
+        object-fit: cover;
+    }
+    .carousel-left-symbol{
+    width: 24px;
+    height: 37px;
+    top: 53px;
+    font-size: 34px;
+    }
+    
+    .carousel-right-symbol{
+        width: 24px;
+        height: 37px;
+        top: 53px;
+        right: 8px;
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 400px){
+    .carousel img{
+        object-fit: cover;
+    }
+    .carousel-left-symbol{
+        width: 19px;
+        height: 22px;
+        top: 28px;
+        font-size: 20px;
+    }
+    
+    .carousel-right-symbol{
+        width: 19px;
+        height: 22px;
+        top: 28px;
+        right: 8px;
+        font-size: 20px;
+    }
+
+    
+}
