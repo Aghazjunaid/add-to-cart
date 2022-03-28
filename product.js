@@ -68,7 +68,7 @@ let bidStealsOfWeekTag = document.getElementById("big-steals-of-week")
 function createDealsOfTheDay(data){
     console.log(data)
     let createdElement = document.createElement("a")
-    createdElement.href = `product-detail?id=${data.id}`
+    createdElement.href = `product-detail.html?id=${data.id}`
     createdElement.className = "footwear-Card-design"
     createdElement.innerHTML = `
         <img src=${data.url} alt="image">
