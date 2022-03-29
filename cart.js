@@ -13,7 +13,7 @@ function createDealsOfTheDay(data){
         <div class="category">${data.description}</div>
         <div class="title">Rs. ${data.amount}</div>
         </a>
-        <button id="increase-quantity">+</button>${data.quantity}<button id="decrease-quantity">-</button>
+        <button onclick="increaseQuantity(${data.id})">+</button>${data.quantity}<button onclick="decreaseQuantity(${data.id})">-</button>
     `
     return createdElement
 }
@@ -48,12 +48,27 @@ cartListing()
 let total = document.getElementById("total")
 total.innerHTML = `Total Amount = ${totalSum}`
 
-let inc = document.getElementById("increase-quantity")
-let dec = document.getElementById("decrease-quantity")
 
-inc.addEventListener('click', ()=> increaseQuantity(data))
-dec.addEventListener('click', ()=> decreaseQuantity(data))
+function increaseQuantity(id){
+    let cartData = JSON.parse(localStorage.getItem("cart"))
+    let leftData = cartData && cartData.filter(ele => ele.id != id)
+    let filterData = cartData && cartData.find(ele => ele.id == id)
+    filterData.quantity += 1
+    localStorage.removeItem('cart')
+    localStorage.setItem('cart', JSON.stringify([filterData, ...leftData]))
+    cartListing()
+}
 
-function increaseQuantity(data){
-    console.log(data)
+function decreaseQuantity(id){
+    let cartData = JSON.parse(localStorage.getItem("cart"))
+    let filterData = cartData && cartData.find(ele => ele.id == id)
+    if(filterData.quantity == 1){
+        alert("Minimum Product must be 1")
+    }else{
+        let leftData = cartData && cartData.filter(ele => ele.id != id)
+        filterData.quantity -= 1
+        localStorage.removeItem('cart')
+        localStorage.setItem('cart', JSON.stringify([filterData, ...leftData]))
+        cartListing()
+    }
 }
