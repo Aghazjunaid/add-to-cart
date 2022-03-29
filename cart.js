@@ -4,16 +4,16 @@ let calculateAmount = document.getElementById("amount-calculation")
 
 function createDealsOfTheDay(data){
     console.log(data)
-    let createdElement = document.createElement("a")
-    createdElement.href = `product-detail.html?id=${data.id}`
+    let createdElement = document.createElement("div")
     createdElement.className = "cart-listing"
-    createdElement.innerHTML = `
+    createdElement.innerHTML = `<a href="product-detail.html?id=${data.id}">
         <img src=${data.url} alt="image">
         <div class="title">${data.title}</div>
         <div class="price">${data.price}</div>
         <div class="category">${data.description}</div>
         <div class="title">Rs. ${data.amount}</div>
-        </div>
+        </a>
+        <button id="increase-quantity">+</button>${data.quantity}<button id="decrease-quantity">-</button>
     `
     return createdElement
 }
@@ -47,3 +47,13 @@ cartListing()
 
 let total = document.getElementById("total")
 total.innerHTML = `Total Amount = ${totalSum}`
+
+let inc = document.getElementById("increase-quantity")
+let dec = document.getElementById("decrease-quantity")
+
+inc.addEventListener('click', ()=> increaseQuantity(data))
+dec.addEventListener('click', ()=> decreaseQuantity(data))
+
+function increaseQuantity(data){
+    console.log(data)
+}
